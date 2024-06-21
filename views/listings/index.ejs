@@ -1,0 +1,28 @@
+<% layout("./layouts/boilerplate.ejs") %> 
+
+        <h3>All Listings</h3>
+        <!-- <form method="get" action="/listings/new">
+        <button>Create New Listing</button>
+    </form> -->
+
+        <!-- booststrap card used below -->
+        <div class="row row-cols-lg-3 row-cols-md-2 row-cols-sm-1">
+            <% for(let Listing of allListings) { %>
+                <a href="/listings/<%= Listing._id %>" class="listing-link">
+                    <div class="card col listing-card">
+                        <img src="<%= Listing.image.url %>" class="card-img-top" alt="listing_image"
+                            style="height: 20rem;"><!--style to set all image size  -->
+                            <div class="card-img-overlay"></div>                    <!-- from bootstrap to add text on the imge -->
+                        <div class="card-body">
+                            <p class="card-text"> 
+                                <b>
+                                    <%= Listing.title %> 
+                                </b>
+                                <br>
+                                Price: RS. <%= Listing.price %>/night
+                            </p>
+                        </div>
+                    </div>
+                </a>
+                <% } %>
+        </div>
