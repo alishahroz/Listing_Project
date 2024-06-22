@@ -131,3 +131,9 @@ body{
     height: 400px;
     width: 100vh;
 }
+
+/* mobile hamburger menu */
+
+.container-fluid{
+    background-color: #9fa3a2 ;
+}
