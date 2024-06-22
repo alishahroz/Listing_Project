@@ -135,5 +135,5 @@ body{
 /* mobile hamburger menu */
 
 .container-fluid{
-    background-color: #f8f9fa ;
+    background-color: #f8f9fa !important;
 }
